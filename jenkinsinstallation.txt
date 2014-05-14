@@ -1,0 +1,21 @@
+Installation:
+Add the Jenkins repository to the yum repos, and install Jenkins from here.
+---------------------------------------------------------------------------
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum install jenkins
+
+Installation of Java
+----------------------
+Jenkins requires Java in order to run, yet certain Fedora-based distros don't include this by default. To install the Open Java Development Kit (OpenJDK) run the following:
+
+sudo yum install java
+
+if running Centos follow below details
+-----------------------------------------
+if you get output similar to the following, it means you're using the default
+(GCJ) version of Java, which will not work with Jenkins:
+
+java -version
+java version "1.5.0"
+gij (GNU libgcj) version 4.4.6 20110731 (Red Hat 4.4.6-3)
